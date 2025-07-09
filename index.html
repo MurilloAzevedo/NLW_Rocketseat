@@ -23,11 +23,35 @@
   <main>
     <section>
       <div>
-      <h2>Assistente de Meta</h2>
-      <p>Pergunte sobre estratégias, build e dicas para seus jogos!</p>
+        <h2>Assistente de Meta</h2>
+        <p>Pergunte sobre estratégias, build e dicas para seus jogos!</p>
+        <form id="form">
+          <input id="apiKey" type="password" placeholder="Informe a API KEY do Gemini" required>
+
+          <select id="gameSelect">
+            <option value="">Selecione um jogo</option>
+            <option value="valorant">Valorant</option>
+            <option value="lol">League of Legends</option>
+            <option value="united">Pokemon United</option>
+          </select>
+
+          <input id="questionInput" type="text" placeholder="Ex: Melhor build para...">
+
+          <button id="askButton">
+            Perguntar
+          </button>
+        </form>
+
+        <div id="aiResponse">
+          <div class="response-content">
+
+          </div>
+        </div>
       </div>
     </section>
   </main>
+
+  <script src="./script.js"></script>
 </body>
 
 </html>
