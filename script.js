@@ -5,8 +5,6 @@ const askButton = document.getElementById('askButton');
 const form = document.getElementById('form');
 const aiResponse = document.getElementById('aiResponse');
 
-//chave API: AIzaSyADxQhWEONUtD5XRLQFT51SdA7ooRyBZ0Q
-
 const perguntarAI = async (question, game, apiKey) => {
   const model = "gemini-2.5-flash"
   const geminiURL = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`
@@ -31,7 +29,7 @@ const perguntarAI = async (question, game, apiKey) => {
   })
 
   const data = await response.json()
- 
+
   return data.candidates[0].contents.parts[0].text
 
 }
